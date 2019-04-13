@@ -1,3 +1,6 @@
+/*
+ * Shared variables
+ */
 $base-fdd-text-color: rgba(38,38,38,0.6);
 $fdd-title-color: black;
 
@@ -9,52 +12,68 @@ $fdd-inner-padding-wide-screen: $fdd-outer-padding-wide-screen / 2;
 $fdd-outer-padding-narrow-screen: 5%;
 $fdd-home-outer-padding-narrow-screen: 5%;
 
-
+/*
+ * Basic typography font set
+ */
 @mixin font-narrow-serif($weight: 300) {
   font-family: 'Oranienbaum', serif;
   font-weight: $weight;
 }
 
-// font-standard-serif
-@mixin font-home-page-title($weight: 300) {
+@mixin font-standard-serif($weight: 300) {
   font-family: 'Noto Serif KR', serif;
   font-weight: $weight;
 }
 
-// font-italic-serif
-@mixin font-home-page-excerpt($size: 100%) {
+@mixin font-italic-serif($size: 100%) {
   font-family: 'Spectral', serif;
   font-weight: 200;
   font-style: italic;
   font-size: $size;
 }
 
-// font-standard-sans
-@mixin base-font-family-set($weight: 300) {
+@mixin font-standard-sans($weight: 300) {
   font-family: 'Gafata', sans-serif;
   font-weight: $weight;
 }
+
+/*
+ * Font aliases
+ *
+ * All end css should @include these aliases.
+ * The aliases should @include the basic typography mixins above.
+ */
+
+// Homepage
 
 @mixin fdd-home-category-name($size: inherited) {
   @if $size != inherited {
     @include text-size($size);
   }
-  @include font-narrow-serif;
+  @include font-narrow-serif();
 }
 
+@mixin fdd-home-article-excerpt($args...) {
+  @include font-italic-serif($args...);
+}
+
+@mixin font-home-article-heading($args...) {
+  @include font-standard-serif($args...);
+}
 @mixin fdd-home-front-article-heading($size: inherited) {
   @if $size != inherited {
     @include text-size($size);
   }
-  @include font-home-page-title(300);
+  @include font-home-article-heading(300);
 }
-
 @mixin fdd-home-oldish-article-heading($size: inherited) {
   @if $size != inherited {
     @include text-size($size);
   }
-  @include font-home-page-title(300);
+  @include font-home-article-heading(300);
 }
+
+// Single
 
 @mixin fdd-single-article-heading($size: false) {
   @if $size {
@@ -62,4 +81,10 @@ $fdd-home-outer-padding-narrow-screen: 5%;
   }
   @include font-narrow-serif();
   color: $fdd-title-color;
+}
+
+// Base article text
+
+@mixin base-font-family-set($args...) {
+  @include font-standard-serif($args...);
 }
