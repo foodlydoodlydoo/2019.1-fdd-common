@@ -64,13 +64,13 @@ $fdd-home-outer-padding-narrow-screen: 5vw;
   @if $size != inherited {
     @include text-size($size);
   }
-  @include font-home-article-heading(300);
+  @include font-home-article-heading();
 }
 @mixin fdd-home-oldish-article-heading($size: inherited) {
   @if $size != inherited {
     @include text-size($size);
   }
-  @include font-home-article-heading(300);
+  @include font-home-article-heading();
 }
 
 // Single
@@ -81,6 +81,13 @@ $fdd-home-outer-padding-narrow-screen: 5vw;
   }
   @include font-narrow-serif();
   color: $fdd-title-color;
+}
+
+@mixin fdd-single-article-excerpt($size: false) {
+  @include font-italic-serif();
+  @if $size {
+    font-size: $size;
+  }
 }
 
 // Base article text
