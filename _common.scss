@@ -12,6 +12,8 @@ $fdd-inner-padding-wide-screen: $fdd-outer-padding-wide-screen / 2;
 $fdd-outer-padding-narrow-screen: 5vw;
 $fdd-home-outer-padding-narrow-screen: 5vw;
 
+$fdd-sticky-menu: true;
+
 /*
  * Basic typography font set, prefixed 'font-'
  */
@@ -94,4 +96,8 @@ $fdd-home-outer-padding-narrow-screen: 5vw;
 
 @mixin base-font-family-set($args...) {
   @include font-standard-serif($args...);
+}
+
+@mixin fdd-blog-descr-font() {
+  @include font-italic-serif();
 }
