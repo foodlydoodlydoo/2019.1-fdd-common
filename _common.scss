@@ -21,7 +21,7 @@ $fdd-category-outer-padding-wide-screen: 12vw;
 $fdd-category-outer-padding-narrow-screen: 14vw;
 $fdd-category-outer-padding-super-narrow-screen: 4vw;
 
-$fdd-sticky-menu: true;
+$fdd-sticky-menu: false;
 
 /*
  * Basic typography font set, prefixed 'font-'
@@ -44,7 +44,8 @@ $fdd-sticky-menu: true;
 }
 
 @mixin font-standard-sans($weight: 400) {
-  font-family: 'Open Sans', sans-serif;
+  //font-family: 'Open Sans', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-weight: $weight;
 }
 
