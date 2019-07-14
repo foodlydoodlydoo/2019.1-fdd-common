@@ -30,7 +30,7 @@ $fdd-sticky-menu: false;
  * Basic typography font set, prefixed 'font-'
  */
 @mixin font-standard-serif($weight: 300) {
-  font-family: 'Noto Serif KR', serif;
+  font-family: 'Noto Serif KR', 'Noto Serif', serif;
   font-weight: $weight;
 }
 
