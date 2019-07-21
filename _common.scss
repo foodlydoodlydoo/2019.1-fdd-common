@@ -84,17 +84,21 @@ $base-text-color: $base-fdd-text-color;
 @mixin font-home-article-heading($args...) {
   @include font-standard-serif($args...);
 }
-@mixin fdd-home-front-article-heading($size: inherited) {
-  @if $size != inherited {
-    @include text-size($size);
+@mixin fdd-home-front-article-heading($weight: null) {
+  @if $weight != null {
+    @include font-home-article-heading($weight);
   }
-  @include font-home-article-heading();
+  @else {
+    @include font-home-article-heading();
+  }
 }
-@mixin fdd-home-oldish-article-heading($size: inherited) {
-  @if $size != inherited {
-    @include text-size($size);
+@mixin fdd-home-oldish-article-heading($weight: null) {
+  @if $weight != null {
+    @include font-home-article-heading($weight);
   }
-  @include font-home-article-heading();
+  @else {
+    @include font-home-article-heading();
+  }
 }
 
 // Single
