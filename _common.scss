@@ -24,11 +24,15 @@ $fdd-menu-narrow-screen-width: 576px;
 $fdd-outer-padding-wide-screen: 5vw;
 $fdd-inner-padding-wide-screen: $fdd-outer-padding-wide-screen / 2;
 $fdd-outer-padding-narrow-screen: 5vw;
-$fdd-home-outer-padding-wide-screen: 8vw;
+
 $fdd-home-wide-max-width: 1400px;
-$fdd-home-too-wide-screen: (1400px * 1.16); // + 2x $fdd-home-outer-padding-wide-screen
+$fdd-home-images-gap: 32px;
+$fdd-home-outer-padding-wide-screen: 5vw;
+$fdd-home-too-wide-screen: (1400px * 1.10); // + 2x $fdd-home-outer-padding-wide-screen
 $fdd-home-outer-padding-narrow-screen: 10vw;
-$fdd-category-outer-padding-wide-screen: 12vw;
+
+$fdd-category-wide-max-width: 1120px;
+$fdd-category-outer-padding-wide-screen: 5vw;
 $fdd-category-outer-padding-narrow-screen: 14vw;
 $fdd-category-outer-padding-super-narrow-screen: 4vw;
 $fdd-search-result-width: 640px;
