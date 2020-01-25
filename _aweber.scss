@@ -196,6 +196,12 @@ body.home {
     }
   }
 }
+body.single,
+body.page {
+  #af-form-81309244 .af-body .privacyPolicy {
+    color: black;
+  }
+}
 body.single {
   .fdd-art--page {
     .fdd-aweber-inline-form {
@@ -204,11 +210,8 @@ body.single {
   }
   .fdd-recipe--page {
     .fdd-aweber-inline-form {
-      margin: 10em auto 0;
+      margin: 9em auto 0;
     }
-  }
-  #af-form-81309244 .af-body .privacyPolicy {
-    color: black;
   }
 }
 .fdd-aweber--title {
