@@ -1,16 +1,8 @@
 $fdd-aweber-submit-button-width: 30%;
-$fdd-aweber-form-height: 2.8em;
+$fdd-aweber-form-elements-height: 2.8em;
 
-.fdd-aweber-inline-form {
-  max-width: 590px;
-}
-.fdd-art--page .fdd-aweber-inline-form {
-  margin: 3em auto 0;
-}
-.fdd-aweber--title {
-  //font-size: 120%;
-  font-weight: bold;
-}
+$fdd-aweber-submit-color-in-content: $fdd-gray-elements-color;
+$fdd-aweber-submit-color-home: $fdd-red-color;
 
 // ----------------------------------------------------------------------------
 // Subscribe Form (1)
@@ -24,7 +16,7 @@ $fdd-aweber-form-height: 2.8em;
   padding: 0;
 }
 #af-form-81309244 .af-body .privacyPolicy {
-  font-size: 12px;
+  @include font-italic-serif(14px);
 }
 #af-form-81309244 .af-body a {
   text-decoration: underline;
@@ -37,6 +29,7 @@ $fdd-aweber-form-height: 2.8em;
   @include font-standard-sans();
   text-decoration: none;
   font-size: 16px;
+  border: $fdd-aweber-submit-color-in-content solid 1px;
 }
 #af-form-81309244 .af-body {
   padding: 1em 0;
@@ -44,6 +37,7 @@ $fdd-aweber-form-height: 2.8em;
   background-position: inherit;
   background-image: none;
   font-size: 12px;
+  @include font-standard-sans();
 }
 #af-form-81309244 .af-quirksMode {
   padding-right: 15px;
@@ -51,14 +45,15 @@ $fdd-aweber-form-height: 2.8em;
 }
 #af-form-81309244 .buttonContainer input.submit {
   width: $fdd-aweber-submit-button-width;
-  @include font-standard-sans();
   margin: 0;
   float: left;
   font-size: 16px;
 }
 main #af-form-81309244 .buttonContainer input.submit {
-  border: rgb(123, 123, 123) 1px solid;
-  background-color: $base-fdd-text-color;
+  //border: rgb(123, 123, 123) 1px solid;
+  //background-color: $base-fdd-text-color;
+  border: $fdd-aweber-submit-color-in-content;
+  background-color: $fdd-aweber-submit-color-in-content;
   color: white;
 }
 #af-form-81309244 .buttonContainer {
@@ -73,7 +68,7 @@ main #af-form-81309244 .buttonContainer input.submit {
 #af-form-81309244 optgroup,
 #af-form-81309244 option {
   margin: 0;
-  height: $fdd-aweber-form-height;
+  height: $fdd-aweber-form-elements-height;
 }
 #af-form-81309244 div {
   margin: 0;
@@ -173,4 +168,49 @@ main #af-form-81309244 .buttonContainer input.submit {
 #af-form-81309244 #webFormSubmitButton {
   -webkit-appearance: none;
   cursor: pointer;
+}
+
+// ----------------------------------------------------------------------------
+
+.fdd-aweber-inline-form {
+  max-width: 590px;
+}
+body.home {
+  .fdd-aweber-inline-form--wrapper {
+    font-size: 150%;
+    padding: 3em $fdd-home-outer-padding-narrow-screen; // use narrow, because on wide, this has no effect
+    background-color: $fdd-gray-elements-color;
+    .fdd-aweber-inline-form {
+      margin: 0 auto;
+      color: white;
+      input {
+        border: none !important;
+      }
+      input.submit {
+        border-color: $fdd-aweber-submit-color-home !important;
+        background-color: $fdd-aweber-submit-color-home !important;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}
+body.single {
+  .fdd-art--page {
+    .fdd-aweber-inline-form {
+      margin: 5em auto 0;
+    }
+  }
+  .fdd-recipe--page {
+    .fdd-aweber-inline-form {
+      margin: 10em auto 0;
+    }
+  }
+  #af-form-81309244 .af-body .privacyPolicy {
+    color: black;
+  }
+}
+.fdd-aweber--title {
+  font-weight: bold;
 }
