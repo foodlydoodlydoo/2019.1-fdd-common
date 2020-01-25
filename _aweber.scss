@@ -1,0 +1,176 @@
+$fdd-aweber-submit-button-width: 30%;
+$fdd-aweber-form-height: 2.8em;
+
+.fdd-aweber-inline-form {
+  max-width: 590px;
+}
+.fdd-art--page .fdd-aweber-inline-form {
+  margin: 3em auto 0;
+}
+.fdd-aweber--title {
+  //font-size: 120%;
+  font-weight: bold;
+}
+
+// ----------------------------------------------------------------------------
+// Subscribe Form (1)
+// This is copy-past + adjustements of the inline <style> from "Raw HTML Version"
+
+#af-form-81309244 .af-body .af-textWrap {
+  display: block;
+  float: left;
+  width: 100% - $fdd-aweber-submit-button-width;
+  margin: 0;
+  padding: 0;
+}
+#af-form-81309244 .af-body .privacyPolicy {
+  font-size: 12px;
+}
+#af-form-81309244 .af-body a {
+  text-decoration: underline;
+  font-style: normal;
+  font-weight: normal;
+}
+#af-form-81309244 .af-body input.text,
+#af-form-81309244 .af-body input.email,
+#af-form-81309244 .af-body textarea {
+  @include font-standard-sans();
+  text-decoration: none;
+  font-size: 16px;
+}
+#af-form-81309244 .af-body {
+  padding: 1em 0;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  background-image: none;
+  font-size: 12px;
+}
+#af-form-81309244 .af-quirksMode {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+#af-form-81309244 .buttonContainer input.submit {
+  width: $fdd-aweber-submit-button-width;
+  @include font-standard-sans();
+  margin: 0;
+  float: left;
+  font-size: 16px;
+}
+main #af-form-81309244 .buttonContainer input.submit {
+  border: rgb(123, 123, 123) 1px solid;
+  background-color: $base-fdd-text-color;
+  color: white;
+}
+#af-form-81309244 .buttonContainer {
+  text-align: right;
+}
+#af-form-81309244 button,
+#af-form-81309244 input,
+#af-form-81309244 submit,
+#af-form-81309244 textarea,
+#af-form-81309244 select,
+#af-form-81309244 label,
+#af-form-81309244 optgroup,
+#af-form-81309244 option {
+  margin: 0;
+  height: $fdd-aweber-form-height;
+}
+#af-form-81309244 div {
+  margin: 0;
+}
+#af-form-81309244 form,
+#af-form-81309244 textarea,
+.af-form-wrapper,
+.af-form-close-button,
+#af-form-81309244 img {
+  float: none;
+  color: inherit;
+  position: static;
+  background-color: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+#af-form-81309244 input,
+#af-form-81309244 button,
+#af-form-81309244 textarea,
+#af-form-81309244 select {
+  font-size: 100%;
+}
+#af-form-81309244 select,
+#af-form-81309244 label,
+#af-form-81309244 optgroup,
+#af-form-81309244 option {
+  padding: 0;
+}
+#af-form-81309244,
+#af-form-81309244 .quirksMode {
+  width: 100%;
+  max-width: 590px;
+}
+#af-form-81309244.af-quirksMode {
+  overflow-x: hidden;
+}
+#af-form-81309244 {
+  background-color: transparent;
+  border-color: inherit;
+  border-width: none;
+  border-style: none;
+  display: block;
+  overflow: hidden;
+}
+.af-body .af-textWrap {
+  text-align: left;
+}
+.af-body input.image {
+  border: none !important;
+}
+.af-body input.submit,
+.af-body input.image,
+.af-form .af-element input.button {
+  float: none !important;
+}
+.af-body input.submit {
+  white-space: inherit;
+}
+.af-body input.text,
+.af-body input.email {
+  width: 100%;
+  float: none;
+}
+.af-clear {
+  clear: both;
+}
+.af-element label {
+  text-align: left;
+  display: block;
+  float: left;
+}
+.af-element {
+  input {
+    padding: 10px;
+  }
+  p {
+    padding-bottom: 0;
+  }
+}
+.af-form-wrapper {
+  text-indent: 0;
+}
+.af-form {
+  box-sizing: border-box;
+  text-align: left;
+  margin: auto;
+}
+.af-quirksMode .af-element {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.lbl-right .af-element label {
+  text-align: right;
+}
+#af-form-81309244 input.submit,
+#af-form-81309244 #webFormSubmitButton {
+  -webkit-appearance: none;
+  cursor: pointer;
+}

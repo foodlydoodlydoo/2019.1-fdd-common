@@ -1,7 +1,7 @@
 /*
  * Shared variables
  */
-$base-fdd-text-color: rgba(38,38,38,0.6);
+$base-fdd-text-color: rgba(38, 38, 38, 0.6);
 $base-fdd-link-color: rgb(89, 89, 89);
 $fdd-title-color: black;
 $fdd-gray-elements-color: rgb(54, 54, 54);
@@ -28,7 +28,7 @@ $fdd-outer-padding-narrow-screen: 5vw;
 $fdd-home-wide-max-width: 1400px;
 $fdd-home-images-gap: 32px;
 $fdd-home-outer-padding-wide-screen: 5vw;
-$fdd-home-too-wide-screen: (1400px * 1.10); // + 2x $fdd-home-outer-padding-wide-screen
+$fdd-home-too-wide-screen: (1400px * 1.1); // + 2x $fdd-home-outer-padding-wide-screen
 $fdd-home-outer-padding-narrow-screen: 10vw;
 
 $fdd-category-wide-max-width: 1120px;
@@ -42,24 +42,24 @@ $fdd-single-wide-max-width: 1400px;
 $fdd-sticky-menu: false;
 
 // Defaults
-$base-bg-color: #FFFFFF;
+$base-bg-color: #ffffff;
 $base-text-color: $base-fdd-text-color;
 
 /*
  * Basic typography font set, prefixed 'font-'
  */
 @mixin font-standard-serif($weight: 300) {
-  font-family: 'Noto Serif KR', 'Noticia Text', serif;
+  font-family: "Noto Serif KR", "Noticia Text", serif;
   font-weight: $weight;
 }
 
 @mixin font-narrow-serif($weight: 300) {
-  font-family: 'Oranienbaum', serif;
+  font-family: "Oranienbaum", serif;
   font-weight: $weight;
 }
 
 @mixin font-italic-serif($size: 100%) {
-  font-family: 'Spectral', serif;
+  font-family: "Spectral", serif;
   font-weight: 200;
   font-style: italic;
   font-size: $size;
@@ -67,7 +67,7 @@ $base-text-color: $base-fdd-text-color;
 
 @mixin font-standard-sans($weight: 400) {
   //font-family: 'Open Sans', sans-serif;
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   font-weight: $weight;
 }
 
@@ -97,16 +97,14 @@ $base-text-color: $base-fdd-text-color;
 @mixin fdd-home-front-article-heading($weight: null) {
   @if $weight != null {
     @include font-home-article-heading($weight);
-  }
-  @else {
+  } @else {
     @include font-home-article-heading();
   }
 }
 @mixin fdd-home-oldish-article-heading($weight: null) {
   @if $weight != null {
     @include font-home-article-heading($weight);
-  }
-  @else {
+  } @else {
     @include font-home-article-heading();
   }
 }
