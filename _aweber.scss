@@ -10,13 +10,16 @@ $fdd-aweber-submit-color-home: $fdd-red-color;
 
 #af-form-81309244 .af-body .af-textWrap {
   display: block;
-  float: left;
-  width: 100% - $fdd-aweber-submit-button-width;
+  // float: left; // !flex
+  // width: 100% - $fdd-aweber-submit-button-width; // !flex
+
   margin: 0;
   padding: 0;
 }
 #af-form-81309244 .af-body .privacyPolicy {
   @include font-italic-serif(14px);
+  width: 100%; // flex
+  margin-right: 0; // flex ^Chrome
 }
 #af-form-81309244 .af-body a {
   text-decoration: underline;
@@ -38,15 +41,24 @@ $fdd-aweber-submit-color-home: $fdd-red-color;
   background-image: none;
   font-size: 12px;
   @include font-standard-sans();
+
+  display: flex;
+  flex-wrap: wrap;
+  // column-gap: 2%; // flex (^Chrome)
+}
+#af-form-81309244 .af-element {
+  width: 32%; // flex
+  margin-right: 2%; // flex ^Chrome
 }
 #af-form-81309244 .af-quirksMode {
   padding-right: 15px;
   padding-left: 15px;
 }
 #af-form-81309244 .buttonContainer input.submit {
-  width: $fdd-aweber-submit-button-width;
+  // width: $fdd-aweber-submit-button-width; // !flex
+  width: 100%; // flex
   margin: 0;
-  float: left;
+  // float: left; // !flex
   font-size: 16px;
 }
 main #af-form-81309244 .buttonContainer input.submit {
@@ -58,6 +70,7 @@ main #af-form-81309244 .buttonContainer input.submit {
 }
 #af-form-81309244 .buttonContainer {
   text-align: right;
+  margin-right: 0; // flex ^Chrome
 }
 #af-form-81309244 button,
 #af-form-81309244 input,
@@ -161,9 +174,6 @@ main #af-form-81309244 .buttonContainer input.submit {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-.lbl-right .af-element label {
-  text-align: right;
-}
 #af-form-81309244 input.submit,
 #af-form-81309244 #webFormSubmitButton {
   -webkit-appearance: none;
@@ -210,10 +220,29 @@ body.single {
   }
   .fdd-recipe--page {
     .fdd-aweber-inline-form {
-      margin: 9em auto 0;
+      margin: 5em auto 0;
     }
   }
 }
 .fdd-aweber--title {
   font-weight: bold;
+}
+
+@media screen and (max-width: $fdd-narrow-width-pixels - 0.1px) {
+  #af-form-81309244 .af-element {
+    width: 100%; // flex
+    margin: 0.25em 0;
+  }
+  body.single {
+    .fdd-art--page {
+      .fdd-aweber-inline-form {
+        margin: 2em auto 0;
+      }
+    }
+    .fdd-recipe--page {
+      .fdd-aweber-inline-form {
+        margin: 3em auto 0;
+      }
+    }
+  }
 }
