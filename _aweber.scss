@@ -187,6 +187,7 @@ main #af-form-81309244 .buttonContainer input.submit {
 }
 body.home {
   .fdd-aweber-inline-form--wrapper {
+    margin-bottom: 3em;
     font-size: 150%;
     padding: 3em $fdd-home-outer-padding-narrow-screen; // use narrow, because on wide, this has no effect
     background-color: $fdd-gray-elements-color;
