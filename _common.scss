@@ -19,8 +19,8 @@ $fdd-wide-width-pixels: 960px;
 $fdd-narrow-width-pixels: 640px; // rule: use 100% width images and get 640px size... ?
 $fdd-thick-decor-underline-color: #bbb;
 
-$fdd-menu-wide-screen-width: 1090px;
-$fdd-menu-narrow-screen-width: 576px;
+$fdd-menu-wide-screen-width: 1120px; // empiric, to fit current menu items
+$fdd-menu-narrow-screen-width: 640px; // empitic, to fit search and sandwich
 
 $fdd-outer-padding-wide-screen: 5vw;
 $fdd-inner-padding-wide-screen: $fdd-outer-padding-wide-screen / 2;
@@ -41,6 +41,9 @@ $fdd-search-result-width: 640px;
 $fdd-single-wide-max-width: 1400px;
 
 $fdd-sticky-menu: false;
+
+$logo-width-wide: 240px;
+$logo-width-narrow: 40vw;
 
 // Defaults
 $base-bg-color: #ffffff;
