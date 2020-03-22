@@ -114,7 +114,6 @@ main #af-form-81309244 .buttonContainer input.submit {
 #af-form-81309244,
 #af-form-81309244 .quirksMode {
   width: 100%;
-  max-width: 590px;
 }
 #af-form-81309244.af-quirksMode {
   overflow-x: hidden;
@@ -182,9 +181,6 @@ main #af-form-81309244 .buttonContainer input.submit {
 
 // ----------------------------------------------------------------------------
 
-.fdd-aweber-inline-form {
-  max-width: 590px;
-}
 body.home {
   .fdd-aweber-inline-form--wrapper {
     margin-bottom: 3em;
@@ -192,6 +188,7 @@ body.home {
     padding: 3em $fdd-home-outer-padding-narrow-screen; // use narrow, because on wide, this has no effect
     background-color: $fdd-gray-elements-color;
     .fdd-aweber-inline-form {
+      max-width: 590px;
       margin: 0 auto;
       color: white;
       input {
