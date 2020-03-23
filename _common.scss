@@ -75,6 +75,12 @@ $base-text-color: $base-fdd-text-color;
   font-weight: $weight;
 }
 
+@mixin font-standard-sans-important($weight: 400) {
+  //font-family: 'Open Sans', sans-serif;
+  font-family: "Abel", sans-serif !important;
+  font-weight: $weight !important;
+}
+
 /*
  * End-css font aliases, prefixed 'fdd-' or what's been taken from theme/block
  *
