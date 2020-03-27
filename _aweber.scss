@@ -185,7 +185,7 @@ body.home {
   .fdd-aweber-inline-form--wrapper {
     margin-bottom: 3em;
     font-size: 150%;
-    padding: 3em $fdd-home-outer-padding-narrow-screen; // use narrow, because on wide, this has no effect
+    padding: 2em $fdd-home-outer-padding-narrow-screen; // use narrow, because on wide, this has no effect
     background-color: $fdd-gray-elements-color;
     .fdd-aweber-inline-form {
       max-width: 590px;
@@ -224,6 +224,17 @@ body.single {
 }
 .fdd-aweber--title {
   font-weight: bold;
+}
+
+@media screen and (min-width: $fdd-wide-width-pixels) {
+  body.single {
+    .fdd-recipe--page {
+      #af-form-81309244 .af-element {
+        width: 100%; // flex
+        margin: 0.25em 0;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $fdd-narrow-width-pixels - 0.1px) {
