@@ -44,7 +44,9 @@
 .woocommerce-message {
   border-top-color: $fdd-red-color !important;
 }
-.woocommerce-info {
+.woocommerce-info,
+.woocommerce-message,
+.woocommerce-error {
   border-top-color: $header-bottom-line-color-dark !important;
   padding: 1em !important;
   margin-bottom: 1em !important;
