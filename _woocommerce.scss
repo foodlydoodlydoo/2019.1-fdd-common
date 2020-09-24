@@ -9,8 +9,13 @@
       font-size: 24px;
       padding: 10px 0 !important;
     }
+  }
+  .woocommerce-ordering,
+  table.variations {
     select {
       padding: 12px;
+      font-size: 16px;
+      @include font-standard-sans();
     }
   }
   .woocommerce-terms-and-conditions-wrapper {
@@ -32,6 +37,16 @@
       margin: 12px 12px 12px 0 !important;
       width: auto !important;
     }
+  }
+
+  /*
+  .edit-account .show-password-input {
+    top: 0 !important;
+  }
+  */
+
+  .woocommerce-Input {
+    padding: 12px;
   }
 }
 
@@ -60,6 +75,16 @@
 .woocommerce-cart-form {
   #coupon_code {
     min-width: 180px;
+  }
+}
+
+.woocommerce-MyAccount-navigation {
+  margin-bottom: 42px;
+}
+.woocommerce-EditAccountForm {
+  p,
+  fieldset {
+    margin-bottom: 20px !important;
   }
 }
 
