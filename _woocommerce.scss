@@ -125,6 +125,12 @@
   }
 }
 
+.single-product {
+  .single_product__excerpt p {
+    padding-bottom: 0.75em;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .woocommerce ul.products li.product {
     width: 100% !important;
