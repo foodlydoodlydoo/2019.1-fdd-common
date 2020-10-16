@@ -104,6 +104,22 @@
   }
 }
 
+.woocommerce-product-gallery .flex-viewport {
+  $border-color: $base-fdd-text-color;
+  border: 1px $border-color solid;
+  border-image: linear-gradient(
+    $border-color 0%,
+    $border-color 10%,
+    $base-bg-color 10%,
+    $base-bg-color 90%,
+    $border-color 90%,
+    $border-color 100%
+  );
+  border-image-width: 1px;
+  border-image-outset: 1px;
+  border-image-slice: 1%;
+}
+
 @media screen and (max-width: 480px) {
   .woocommerce ul.products li.product {
     width: 100% !important;
