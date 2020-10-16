@@ -226,6 +226,12 @@ body.single {
   display: block;
   font-size: 90%;
 }
+body.home {
+  .fdd-aweber--message {
+    margin-top: 0.5em;
+    font-size: 14px;
+  }
+}
 
 @media screen and (min-width: $fdd-wide-width-pixels) {
   body.single {
