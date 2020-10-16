@@ -222,6 +222,10 @@ body.single {
 .fdd-aweber--title {
   font-weight: bold;
 }
+.fdd-aweber--message {
+  display: block;
+  font-size: 90%;
+}
 
 @media screen and (min-width: $fdd-wide-width-pixels) {
   body.single {
