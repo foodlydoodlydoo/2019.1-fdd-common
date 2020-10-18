@@ -67,7 +67,6 @@
     .button.add_to_cart_button,
     .price {
       position: absolute;
-      opacity: 0.8;
     }
     .button.add_to_cart_button {
       bottom: 40px;
@@ -83,8 +82,8 @@
     }
   }
 
-  div.product.fdd:hover {
-    .button.add_to_cart_button,
+  div.product.fdd a:hover {
+    & + .button.add_to_cart_button,
     .price {
       display: initial;
     }
