@@ -39,14 +39,50 @@
     }
   }
 
-  /*
-  .edit-account .show-password-input {
-    top: 0 !important;
-  }
-  */
-
   .woocommerce-Input {
     padding: 12px;
+  }
+
+  div.shop-page--text {
+    width: 40%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  div.products.fdd {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 4em;
+    div.product.fdd {
+      a img {
+        outline: solid 7px #666;
+        margin: 17px 22px;
+        max-width: 80vw;
+        max-height: 70vh;
+        // image size is not defined by css, but by Images::sizes_attribute_hook
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $fdd-narrow-width-pixels) {
+  div.products.fdd {
+    div.product.fdd {
+      a img {
+        margin: 25px 0 !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .woocommerce {
+    div.shop-page--text {
+      width: 100%;
+      margin-bottom: 4em;
+    }
   }
 }
 
@@ -131,10 +167,12 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .woocommerce ul.products li.product {
-    width: 100% !important;
-    float: none !important;
-    margin-bottom: 48px !important;
+.woocommerce-pagination {
+  li a,
+  li span {
+    padding: 1em !important;
+  }
+  a.page-numbers {
+    border: none !important;
   }
 }
