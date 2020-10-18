@@ -64,11 +64,43 @@
         // image size is not defined by css, but by Images::sizes_attribute_hook
       }
     }
+    .button.add_to_cart_button,
+    .price {
+      position: absolute;
+      opacity: 0.8;
+    }
+    .button.add_to_cart_button {
+      bottom: 40px;
+      right: 35px;
+      display: none;
+    }
+    .price {
+      padding: 0 0.5em;
+      background: white;
+      bottom: 80px;
+      right: 35px;
+      display: none;
+    }
+  }
+
+  div.product.fdd:hover {
+    .button.add_to_cart_button,
+    .price {
+      display: initial;
+    }
   }
 }
 
 @media screen and (max-width: $fdd-narrow-width-pixels) {
   div.products.fdd {
+    .button.add_to_cart_button {
+      bottom: 50px !important;
+      right: 15px !important;
+    }
+    .price {
+      bottom: 90px !important;
+      right: 15px !important;
+    }
     div.product.fdd {
       a img {
         margin: 25px 0 !important;
@@ -76,6 +108,18 @@
     }
   }
 }
+
+/*
+// Doesn't work in fucking firefox!
+@media (hover: none) {
+  div.products.fdd {
+    .button.add_to_cart_button,
+    .price {
+      display: initial !important;
+    }
+  }
+}
+*/
 
 @media screen and (max-width: 880px) {
   .woocommerce {
