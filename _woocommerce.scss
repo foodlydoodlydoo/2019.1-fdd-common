@@ -82,8 +82,8 @@
     }
   }
 
-  div.product.fdd a:hover {
-    & + .button.add_to_cart_button,
+  div.product.fdd:hover {
+    .button.add_to_cart_button,
     .price {
       display: initial;
     }
