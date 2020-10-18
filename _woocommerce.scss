@@ -63,6 +63,10 @@
         max-height: 70vh;
         // image size is not defined by css, but by Images::sizes_attribute_hook
       }
+      &.first {
+        width: 40%;
+        text-align: right;
+      }
     }
     .button.add_to_cart_button,
     .price {
