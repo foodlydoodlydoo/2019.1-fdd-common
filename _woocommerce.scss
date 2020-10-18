@@ -63,10 +63,12 @@
         max-height: 70vh;
         // image size is not defined by css, but by Images::sizes_attribute_hook
       }
+      /*
       &.first {
         width: 40%;
         text-align: right;
       }
+      */
     }
     .button.add_to_cart_button,
     .price {
@@ -129,7 +131,9 @@
   .woocommerce {
     div.shop-page--text {
       width: 100%;
-      margin-bottom: 4em;
+      margin-bottom: 2em;
+      padding: 0 0 2em;
+      border-bottom: 1px solid $fdd-light-gray;
     }
     div.product.fdd.first {
       width: auto !important;
