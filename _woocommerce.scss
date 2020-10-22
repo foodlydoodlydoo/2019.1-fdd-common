@@ -109,6 +109,22 @@
       display: initial;
     }
   }
+
+  .select2-container--default .select2-selection--single {
+    background-color: $base-bg-color;
+    border: 1px solid #888;
+    border-radius: 0px;
+  }
+  .select2-container .select2-selection--single {
+    height: 38px;
+    .select2-selection__rendered {
+      height: 38px;
+      line-height: 38px;
+    }
+    .select2-selection__arrow {
+      height: 38px;
+    }
+  }
 } // .woocommerce
 
 @media screen and (max-width: $fdd-narrow-width-pixels) {
@@ -177,6 +193,12 @@
 }
 
 .woocommerce-cart {
+  table.cart {
+    td,
+    th {
+      border-right: none;
+    }
+  }
   .product-quantity {
     display: none !important;
   }
@@ -191,6 +213,45 @@
   #coupon_code {
     min-width: 180px;
   }
+}
+
+.woocommerce-checkout {
+  #customer_details {
+    .col-1 {
+      //margin-right: 32px;
+    }
+  }
+  .woocommerce-checkout-payment {
+    clear: both;
+    margin-top: 32px;
+  }
+  .woocommerce-checkout-review-order-table {
+    border: none !important;
+    thead tr th {
+      border-bottom: solid 1px gray !important;
+    }
+    td,
+    th {
+      border: none !important;
+      padding: 0.25em 0 !important;
+    }
+  }
+  input {
+    padding: 10px;
+  }
+
+  /*
+  // Doesn't work because WC adds the checkbox inside the label...
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"] + label:before {
+    content: "☐";
+  }
+  input:checked + label:before {
+    content: "☑";
+  }
+  */
 }
 
 .woocommerce-MyAccount-navigation {
