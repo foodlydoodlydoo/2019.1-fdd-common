@@ -49,6 +49,14 @@
     margin-bottom: 1em;
     align-self: flex-start;
   }
+  // @prerovsky1
+  div.shop-page--text {
+    width: 100%;
+    margin: 2em 0 1em;
+    align-self: flex-end;
+    font-size: 12px;
+    text-align: center;
+  }
 
   div.products.fdd {
     display: flex;
@@ -58,8 +66,9 @@
     margin: 0 0 4em;
     div.product.fdd {
       a img {
-        outline: solid 7px #666;
-        margin: 17px 22px;
+        // outline: solid 7px #666; // @prerovsky1
+        // margin: 17px 22px; // @prerovsky1
+        margin: 10px 16px; // // @prerovsky1
         max-width: 80vw;
         max-height: 70vh;
         // image size is not defined by css, but by Images::sizes_attribute_hook
@@ -130,12 +139,14 @@
 
 @media screen and (max-width: 880px) {
   .woocommerce {
+    /* // @prerovsky1
     div.shop-page--text {
       width: 100%;
       margin-bottom: 2em;
       padding: 0 0 2em;
       border-bottom: 1px solid $fdd-light-gray;
     }
+    */
     div.product.fdd.first {
       width: auto !important;
       text-align: left !important;
@@ -164,6 +175,9 @@
   .product-quantity {
     display: none !important;
   }
+  .product-thumbnail a img {
+    width: 128px;
+  }
 }
 .woocommerce-cart-form {
   #coupon_code {
@@ -181,7 +195,34 @@
   }
 }
 
+$single-product-header-flex: false;
 .single-product {
+  header {
+    margin: 2em 0 3em;
+    .single__title {
+      margin-bottom: 0;
+    }
+    @if ($single-product-header-flex) {
+      display: flex;
+      align-items: baseline;
+      justify-content: left;
+      .single__title {
+        display: block;
+        text-align: right;
+        margin: 0;
+      }
+      .single__title_excerpt_div {
+        width: 1px;
+        background: $base-fdd-text-color;
+        height: 32px;
+        align-self: center;
+        margin: 1em;
+      }
+      .single__excerpt {
+        text-align: left;
+      }
+    }
+  }
   section {
     padding-left: 5vw;
     padding-right: 5vw;
@@ -194,6 +235,28 @@
   }
   .fdd-woocommerce_after_single_product_summary {
     clear: both;
+  }
+}
+
+@media screen and (max-width: 768.1px) {
+  .single-product {
+    header {
+      display: block;
+      .single__title {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      @if ($single-product-header-flex) {
+        .single__title_excerpt_div {
+          display: none;
+        }
+      }
+      .single__excerpt {
+        margin-top: 1em;
+        text-align: center;
+      }
+    }
   }
 }
 
