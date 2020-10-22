@@ -175,8 +175,11 @@
   .product-quantity {
     display: none !important;
   }
-  .product-thumbnail a img {
-    width: 128px;
+  .product-thumbnail {
+    width: 153px;
+    a img {
+      width: 128px !important;
+    }
   }
 }
 .woocommerce-cart-form {
