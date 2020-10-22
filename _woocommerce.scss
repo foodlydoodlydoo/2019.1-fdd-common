@@ -71,6 +71,7 @@
         max-height: 70vh;
         // image size is not defined by css, but by Images::sizes_attribute_hook
         &.portrait {
+          // To fit only 3 images
           margin-left: 30px;
           margin-right: 30px;
         }
@@ -81,21 +82,23 @@
         text-align: right;
       }
       */
-    }
-    .button.add_to_cart_button,
-    .price {
-      position: absolute;
+      .button.add_to_cart_button,
+      .price {
+        position: absolute;
+        right: 45px;
+      }
     }
     .button.add_to_cart_button {
       bottom: 40px;
-      right: 35px;
       display: none;
     }
     .price {
       padding: 0 0.5em;
       background: white;
       bottom: 80px;
-      right: 35px;
+      display: none;
+    }
+    a.added_to_cart {
       display: none;
     }
   }
@@ -106,7 +109,7 @@
       display: initial;
     }
   }
-}
+} // .woocommerce
 
 @media screen and (max-width: $fdd-narrow-width-pixels) {
   div.products.fdd {
