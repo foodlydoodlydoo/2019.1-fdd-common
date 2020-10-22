@@ -110,6 +110,9 @@
     }
   }
 
+  table.shop_table {
+    border-collapse: collapse !important;
+  }
   .select2-container--default .select2-selection--single {
     background-color: $base-bg-color;
     border: 1px solid #888;
@@ -198,6 +201,10 @@
     th {
       border-right: none;
     }
+  }
+  .product-remove {
+    width: 1em;
+    padding-right: 0 !important;
   }
   .product-quantity {
     display: none !important;
