@@ -66,12 +66,14 @@
     margin: 0 0 4em;
     div.product.fdd {
       a img {
-        // outline: solid 7px #666; // @prerovsky1
-        // margin: 17px 22px; // @prerovsky1
-        margin: 10px 16px; // // @prerovsky1
+        margin: 16px 16px;
         max-width: 80vw;
         max-height: 70vh;
         // image size is not defined by css, but by Images::sizes_attribute_hook
+        &.portrait {
+          margin-left: 30px;
+          margin-right: 30px;
+        }
       }
       /*
       &.first {
