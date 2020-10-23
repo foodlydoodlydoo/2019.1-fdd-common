@@ -43,7 +43,8 @@
     padding: 12px;
   }
   .form-row {
-    padding: 12px 0 !important;
+    // padding: 12px 0 !important;
+    padding: 0 0 24px !important;
     margin: 0 !important;
   }
 
@@ -227,15 +228,13 @@
 }
 
 .woocommerce-checkout {
-  .woocommerce-checkout-payment {
-    clear: both;
-    margin-top: 32px;
-  }
   .woocommerce-checkout-review-order-table {
-    border: none !important;
+    border-color: gray !important;
+    /*
     thead tr th {
       border-bottom: solid 1px gray !important;
     }
+    */
     tr.cart-subtotal {
       display: none;
     }
@@ -245,22 +244,36 @@
     td,
     th {
       border: none !important;
-      padding: 0.25em 0 !important;
+      // padding: 0.25em 0 !important;
     }
   }
-  #payment {
+  .col-1 {
+    padding-bottom: 2em !important;
+  }
+  .woocommerce-checkout-payment {
+    clear: both;
+    margin-top: 1em;
     border-radius: 0 !important;
     border: none;
     background: none !important;
-    .wc_payment_methods::before {
-      content: "Payment method" !important;
+    .wc_payment_methods::before,
+    .place-order::before {
+      padding: 2em 0 0.5em;
       clear: both;
-      padding: 0 0 1em;
       // Font size settings are very empiric, copy <h3> styling
       font-size: 19px !important;
       font-weight: 700;
     }
-    .wc_payment_methods,
+    .wc_payment_methods::before {
+      content: "Payment method" !important;
+    }
+    .place-order::before {
+      content: "Confirmation" !important;
+    }
+    .payment_methods {
+      border: none !important;
+    }
+    .payment_methods,
     .place-order {
       padding: 1em 0 !important;
     }
@@ -268,23 +281,13 @@
     .woocommerce-privacy-policy-text {
       font-size: 12px !important;
     }
+    .form-row.validate-required {
+      padding-top: 0.5em !important;
+    }
   }
   input {
     padding: 10px;
   }
-
-  /*
-  // Doesn't work because WC adds the checkbox inside the label...
-  input[type="checkbox"] {
-    display: none;
-  }
-  input[type="checkbox"] + label:before {
-    content: "☐";
-  }
-  input:checked + label:before {
-    content: "☑";
-  }
-  */
 }
 
 .woocommerce-MyAccount-navigation {
