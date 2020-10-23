@@ -42,6 +42,10 @@
   .woocommerce-Input {
     padding: 12px;
   }
+  .form-row {
+    padding: 12px 0 !important;
+    margin: 0 !important;
+  }
 
   div.shop-page--text {
     width: 40%;
@@ -232,10 +236,37 @@
     thead tr th {
       border-bottom: solid 1px gray !important;
     }
+    tr.cart-subtotal {
+      display: none;
+    }
+    tr.order-total {
+      border-top: solid 1px gray;
+    }
     td,
     th {
       border: none !important;
       padding: 0.25em 0 !important;
+    }
+  }
+  #payment {
+    border-radius: 0 !important;
+    border: none;
+    background: none !important;
+    .wc_payment_methods::before {
+      content: "Payment method" !important;
+      clear: both;
+      padding: 0 0 1em;
+      // Font size settings are very empiric, copy <h3> styling
+      font-size: 19px !important;
+      font-weight: 700;
+    }
+    .wc_payment_methods,
+    .place-order {
+      padding: 1em 0 !important;
+    }
+    .payment_box,
+    .woocommerce-privacy-policy-text {
+      font-size: 12px !important;
     }
   }
   input {
