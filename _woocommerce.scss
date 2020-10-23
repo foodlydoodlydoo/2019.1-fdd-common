@@ -212,15 +212,14 @@
   .product-remove {
     padding-right: 0 !important;
   }
-  .product-quantity,
-  .product-subtotal {
-    display: none !important;
+  .product-name {
+    font-weight: bold;
   }
   .product-thumbnail {
-    width: 153px;
+    width: 120px;
     a img {
-      width: 128px !important;
-      height: 128px !important;
+      width: 96px !important;
+      height: 96px !important;
       object-fit: cover;
     }
   }
