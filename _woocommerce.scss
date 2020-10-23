@@ -211,16 +211,18 @@
     }
   }
   .product-remove {
-    width: 1em;
     padding-right: 0 !important;
   }
-  .product-quantity {
+  .product-quantity,
+  .product-subtotal {
     display: none !important;
   }
   .product-thumbnail {
     width: 153px;
     a img {
-      width: 128px !important;
+      width: auto !important;
+      max-width: 128px !important;
+      max-height: 128px !important;
     }
   }
 }
