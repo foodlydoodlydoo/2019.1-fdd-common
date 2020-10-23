@@ -189,15 +189,18 @@
   content: none !important;
 }
 
-.woocommerce-message {
+.woocommerce-error {
   border-top-color: $fdd-red-color !important;
+}
+.woocommerce-info,
+.woocommerce-message {
+  border-top-color: $header-bottom-line-color-dark !important;
 }
 .woocommerce-info,
 .woocommerce-message,
 .woocommerce-error {
-  border-top-color: $header-bottom-line-color-dark !important;
   padding: 1em !important;
-  margin-bottom: 1em !important;
+  margin: 0 0 1em 0 !important;
 }
 
 .woocommerce-cart {
