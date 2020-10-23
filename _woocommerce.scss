@@ -43,8 +43,7 @@
     padding: 12px;
   }
   .form-row {
-    // padding: 12px 0 !important;
-    padding: 0 0 24px !important;
+    padding: 12px 0 !important;
     margin: 0 !important;
   }
 
@@ -254,6 +253,12 @@
   }
   .col-1 {
     padding-bottom: 2em !important;
+  }
+  .woocommerce-billing-fields {
+    .form-row {
+      // To move the billing fields closer to the title
+      padding: 0 0 24px !important;
+    }
   }
   .woocommerce-checkout-payment {
     clear: both;
