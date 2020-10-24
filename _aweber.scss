@@ -185,7 +185,7 @@ body.home {
   .fdd-aweber-inline-form--wrapper {
     text-align: left !important;
     .fdd-aweber-inline-form {
-      max-width: 590px;
+      max-width: $fdd-home-cta-max-width;
       margin: 0 auto;
       color: white;
       input {
