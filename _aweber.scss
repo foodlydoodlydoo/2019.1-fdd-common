@@ -187,7 +187,8 @@ body.home {
     .fdd-aweber-inline-form {
       max-width: $fdd-home-cta-max-width;
       margin: 0 auto;
-      color: white;
+      //color: white;
+      color: black;
       input {
         border: none !important;
       }
@@ -196,7 +197,8 @@ body.home {
         background-color: $fdd-aweber-submit-color-home !important;
       }
       a {
-        color: white;
+        //color: white;
+        color: black;
       }
     }
   }
