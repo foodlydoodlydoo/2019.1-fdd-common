@@ -156,7 +156,7 @@ $base-text-color: $base-fdd-text-color;
 }
 
 @mixin fdd-blog-descr-font() {
-  @include font-italic-serif();
+  @include font-standard-sans();
 }
 
 // Home page call-to-action common styling
