@@ -163,6 +163,7 @@ $base-text-color: $base-fdd-text-color;
 
 @mixin home-call-to-action() {
   //margin-bottom: 3em;
+  @include font-standard-sans();
   font-size: 150%;
   padding: 2em $fdd-home-outer-padding-narrow-screen; // use narrow, because on wide, this has no effect
   background-color: $fdd-gray-elements-color;
